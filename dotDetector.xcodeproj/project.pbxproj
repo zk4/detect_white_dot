@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5828665F24D896FB0044B64A /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5828665E24D896FB0044B64A /* c.jpg */; };
 		58879E8824D855960023C845 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58879E8724D855960023C845 /* AppDelegate.m */; };
 		58879E8B24D855960023C845 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58879E8A24D855960023C845 /* SceneDelegate.m */; };
 		58879E8E24D855960023C845 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58879E8D24D855960023C845 /* ViewController.m */; };
@@ -32,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5828665E24D896FB0044B64A /* c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpg; sourceTree = "<group>"; };
 		58879E8324D855960023C845 /* dotDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dotDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58879E8624D855960023C845 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58879E8724D855960023C845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				58879EAE24D855B20023C845 /* ImageHelper.h */,
 				58879EAD24D855B10023C845 /* ImageHelper.m */,
 				58879EB424D861520023C845 /* dot.png */,
-				5828665E24D896FB0044B64A /* c.jpg */,
 				58879E8D24D855960023C845 /* ViewController.m */,
 				58879EB224D856AA0023C845 /* a.png */,
 				58879E8F24D855960023C845 /* Main.storyboard */,
@@ -205,7 +202,6 @@
 				58879E9624D855970023C845 /* LaunchScreen.storyboard in Resources */,
 				58879E9324D855970023C845 /* Assets.xcassets in Resources */,
 				58879E9124D855960023C845 /* Main.storyboard in Resources */,
-				5828665F24D896FB0044B64A /* c.jpg in Resources */,
 				58879EB524D861520023C845 /* dot.png in Resources */,
 				58879EB324D856AA0023C845 /* a.png in Resources */,
 			);
