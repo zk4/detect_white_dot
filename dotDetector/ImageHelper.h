@@ -37,8 +37,13 @@
     withHeight:(int)height;
 
 + (UIImage *)convertImageToGrayScale:(UIImage *)image;
+
 + (void)  printRGBA:(const unsigned char*) array width:(int) width height:(int)height;
+
 + (UIImage*)drawRectangleOnImage:(UIImage*)image where:(NSMutableArray*) rects ;
+
 + (NSMutableArray *) dectectWhiteDots:(const unsigned char*) array width:(int) width height:(int)height isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest;
+
++ (NSMutableArray *) dectectWhiteDots:(UIImage*) image isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest;
 
 @end

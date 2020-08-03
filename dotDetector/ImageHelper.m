@@ -251,6 +251,14 @@
          }
      }
 }
+
++ (NSMutableArray *) dectectWhiteDots:(UIImage*) image isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest{
+    const unsigned char* bytes=  [ImageHelper convertUIImageToBitmapRGBA8:image];
+
+    return    [ImageHelper dectectWhiteDots:bytes width:image.size.width height:image.size.height isWhiteThreadhold:whiteThreash  boundingX:bx  boundingY:by fetchOnlyWhitest:whitest];
+
+}
+
 + (NSMutableArray *) dectectWhiteDots:(const unsigned char*) array width:(int) width height:(int)height isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest{
     float maxavg = 0.f;
     NSMutableArray * nsa =  [[NSMutableArray alloc]init];
