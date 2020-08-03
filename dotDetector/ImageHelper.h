@@ -2,7 +2,7 @@
  * The MIT License
  *
  * Copyright (c) 2011 Paul Solt, PaulSolt@gmail.com
- *
+ * modified by zk
  * https://github.com/PaulSolt/UIImage-Conversion/blob/master/MITLicense.txt
  *
  */
@@ -35,5 +35,10 @@
 + (UIImage *) convertBitmapRGBA8ToUIImage:(unsigned char *)buffer
     withWidth:(int)width
     withHeight:(int)height;
+
++ (UIImage *)convertImageToGrayScale:(UIImage *)image;
++ (void)  printRGBA:(const unsigned char*) array width:(int) width height:(int)height;
++ (UIImage*)drawRectangleOnImage:(UIImage*)image where:(NSMutableArray*) rects ;
++ (NSMutableArray *) dectectWhiteDots:(const unsigned char*) array width:(int) width height:(int)height isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest;
 
 @end
