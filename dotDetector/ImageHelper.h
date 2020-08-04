@@ -42,8 +42,8 @@
 
 + (UIImage*)drawRectangleOnImage:(UIImage*)image where:(NSMutableArray*) rects ;
 
-+ (NSMutableArray *) detectDots:(const unsigned char*) array width:(int) width height:(int)height isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf;
++ (NSMutableArray *) detectDots:(const unsigned char*) array width:(int) width height:(int)height whiteThresh:(float) whiteThresh  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf;
 
-+ (NSMutableArray *) detectDots:(UIImage*) image isWhiteThreadhold:(float) whiteThreash   boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf;
++ (NSMutableArray *) detectDots:(UIImage*) image whiteThresh:(float) whiteThresh   boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf;
 
 @end

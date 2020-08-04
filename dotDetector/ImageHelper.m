@@ -252,14 +252,14 @@
      }
 }
 
-+ (NSMutableArray *) detectDots:(UIImage*) image isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf{
++ (NSMutableArray *) detectDots:(UIImage*) image whiteThresh:(float) whiteThresh  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf{
     const unsigned char* bytes=  [ImageHelper convertUIImageToBitmapRGBA8:image];
 
-    return    [ImageHelper detectDots:bytes width:image.size.width height:image.size.height isWhiteThreadhold:whiteThreash  boundingX:bx  boundingY:by fetchOnlyWhitest:whitest strideFast:sf];
+    return    [ImageHelper detectDots:bytes width:image.size.width height:image.size.height whiteThresh:whiteThresh  boundingX:bx  boundingY:by fetchOnlyWhitest:whitest strideFast:sf];
 
 }
 
-+ (NSMutableArray *) detectDots:(const unsigned char*) array width:(int) width height:(int)height isWhiteThreadhold:(float) whiteThreash  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf{
++ (NSMutableArray *) detectDots:(const unsigned char*) array width:(int) width height:(int)height whiteThresh:(float) whiteThresh  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf{
     float maxavg = 0.f;
     NSMutableArray * nsa =  [[NSMutableArray alloc]init];
     CGRect ret = CGRectMake(-1,-1,0,0);
@@ -284,7 +284,7 @@
                  }
              }
              ava = ava / (count*1.0f);
-             if(ava >= whiteThreash){
+             if(ava >= whiteThresh){
                  if(ava>= maxavg){
                     maxavg =ava;
                     ret = CGRectMake(x, y, bx, by);
