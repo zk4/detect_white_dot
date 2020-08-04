@@ -262,8 +262,8 @@
 + (NSMutableArray *) detectDots:(const unsigned char*) array width:(int) width height:(int)height whiteThresh:(float) whiteThresh  boundingX:(int)bx boundingY:(int)by fetchOnlyWhitest:(BOOL)whitest strideFast:(BOOL) sf{
     float maxavg = 0.f;
     NSMutableArray * nsa =  [[NSMutableArray alloc]init];
-    CGRect ret = CGRectMake(-1,-1,0,0);
- 
+   
+    CGRect maxRec = CGRectMake(-1,-1,0,0);
     for(int y = 0; y< height-by+1; y+=(sf?by:1)){
         for (int x = 0; x< width-bx+1; x+=(sf?bx:1)){
              float ava = 0 ;
@@ -285,19 +285,20 @@
              }
              ava = ava / (count*1.0f);
              if(ava >= whiteThresh){
-                 if(ava>= maxavg){
+                
+                 if( ava> maxavg){
                     maxavg =ava;
-                    ret = CGRectMake(x, y, bx, by);
-                     if(!whitest)
-                         [nsa addObject:[NSValue valueWithCGRect:ret]];
-                    NSLog(@"%d,%d, ava %f, probably iswhite",x,y, ava);
+                    maxRec = CGRectMake(x, y, bx, by);
                  }
-
+                 
+                 if(!whitest)
+                     [nsa addObject:[NSValue valueWithCGRect:CGRectMake(x, y, bx, by)]];
+//                NSLog(@"%d,%d, ava %f, probably iswhite",x,y, ava);
              }
          }
     }
   if(whitest)
-    [nsa addObject:[NSValue valueWithCGRect:ret]];
+    [nsa addObject:[NSValue valueWithCGRect:maxRec]];
   return nsa;
 }
  
