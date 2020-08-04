@@ -25,8 +25,8 @@
     
     UIImage * image =  [UIImage imageNamed:@"a.png"];
 
-    NSMutableArray * rects = [ImageHelper dectectWhiteDots:image isWhiteThreadhold:.7f  boundingX:10  boundingY:10 fetchOnlyWhitest:YES];
-    
+    NSMutableArray * rects = [ImageHelper detectDots:image isWhiteThreadhold:.5f  boundingX:10  boundingY:10 fetchOnlyWhitest:YES strideFast:YES];
+   
     UIImage * newimg= [ImageHelper drawRectangleOnImage:image where:rects];
 
     imageView.image  = newimg;
